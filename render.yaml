@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: rigel-clause-api
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port 1902
+    envVars:
+      - key: AWS_ACCESS_KEY_ID
+        value: AKIA5YZTSH2KV63MC22J
+      - key: AWS_SECRET_ACCESS_KEY
+        value: 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
+      - key: AWS_REGION
+        value: us-east-1
