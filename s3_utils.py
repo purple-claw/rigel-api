@@ -16,5 +16,5 @@ def upload_to_s3(local_path, filename, bucket=None):
     key = f"uploads/{filename}"
     s3.upload_file(local_path, bucket, key)
     
-    s3_url = f"https://rigelpdfs.s3.us-east-1.amazonaws.com/{key}"
+    s3_url = f"https://{bucket}.s3.amazonaws.com/{key}"
     return s3_url
