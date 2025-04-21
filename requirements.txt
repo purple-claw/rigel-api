@@ -1,0 +1,6 @@
+flask
+pdfminer.six
+spacy
+requests
+boto3
+python-dotenv
